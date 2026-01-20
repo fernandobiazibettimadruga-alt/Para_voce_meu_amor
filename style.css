@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease;
+}
+
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #fff0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+}
+
+#letter {
+  display: none;
+  margin-top: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: float 5s linear infinite;
+  color: pink;
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+.gallery,
+.videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-frame {
+  width: 60%;
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 20px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background: #000;
+}
+
+.media-frame img,
+.media-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.love-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.love-list li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 18px; }
+  .media-frame {
+    width: 85%;
+    max-width: 320px;
+  }
+  .love-list {
+    max-width: 90%;
+    font-size: 15px;
+  }
+}
