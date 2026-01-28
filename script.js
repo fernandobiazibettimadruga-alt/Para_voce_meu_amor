@@ -5,7 +5,7 @@ const musicList = [
   "./imagens/musica4.mp3"
 ];
 
-let currentMusic = 0;
+let currentMusic = Math.floor(Math.random() * musicList.length);
 const musicPlayer = document.getElementById("music");
 
 const INITIAL_VOLUME = 0.2;
